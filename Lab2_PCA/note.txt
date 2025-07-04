@@ -1,0 +1,162 @@
+Dưới đây là phần giải thích về dữ liệu trong file ABIDE2(updated).csv bạn vừa cung cấp:
+
+✅ Tổng quan dữ liệu:
+Số hàng: 1004 người tham gia.
+
+Số cột (biến): 1445 biến.
+
+Dữ liệu chứa:
+
+Thông tin định danh và nhóm.
+
+Đặc trưng hình thái học từ vỏ não (cortical features).
+
+Dữ liệu định lượng: phần lớn là số thực (float64).
+
+🧾 Các cột ban đầu:
+Tên cột	Loại dữ liệu	Ý nghĩa
+Unnamed: 0	int64	Index dòng (có thể bỏ)
+site	object	Tên trung tâm nghiên cứu (nguồn dữ liệu)
+subject	int64	Mã định danh người tham gia
+age	float64	Tuổi của người tham gia
+group	object	Nhóm bệnh: "Cancer" hoặc "Normal"
+
+🧠 Các cột bắt đầu bằng fsArea_ hoặc fsCT_ là gì?
+1. fsArea_* – Surface Area (diện tích vỏ não)
+Ví dụ: fsArea_L_V1_ROI, fsArea_L_MST_ROI
+
+Ý nghĩa:
+
+fsArea: diện tích bề mặt của vùng vỏ não.
+
+L hoặc R: bán cầu trái (L) hoặc phải (R).
+
+V1, V2, MST, V6, V3, ...: tên vùng não theo atlas (vùng thị giác, vận động, nhận thức…).
+
+_ROI: vùng quan tâm (Region of Interest).
+
+👉 Dùng để đánh giá morphology (hình thái học) của não.
+
+2. fsCT_* – Cortical Thickness (độ dày vỏ não)
+Ví dụ: fsCT_R_p24_ROI, fsCT_R_A4_ROI, ...
+
+Ý nghĩa:
+
+fsCT: độ dày vỏ não.
+
+R: bán cầu phải (hoặc L nếu là trái).
+
+p24, A4, TE1m,...: các vùng Brodmann hoặc theo hệ thống HCP.
+
+_ROI: cũng là "Region of Interest".
+
+👉 Dùng để phát hiện sự thay đổi cấu trúc não liên quan đến bệnh lý.
+
+💡 Ý nghĩa tổng thể của dữ liệu:
+Đây là một bộ dữ liệu thần kinh học lâm sàng, mô tả các đặc trưng hình thái vỏ não trích xuất từ ảnh MRI.
+
+Mục tiêu là so sánh giữa nhóm Cancer và Normal dựa trên các chỉ số như:
+
+Diện tích vùng vỏ não (fsArea)
+
+Độ dày vỏ não (fsCT)
+
+
+
+
+
+
+
+🧠 Visual Cortex Areas
+V1, V2, V3, V4, V6, V7, V8: These are early visual areas involved in processing various aspects of visual information such as orientation, motion, and color.
+
+MT, MST: Middle temporal areas associated with motion perception.
+
+LO1, LO2, LO3: Lateral occipital areas implicated in object recognition.
+
+V3A, V3B, V3CD: Higher-order visual areas involved in processing complex visual stimuli.
+
+VMV1, VMV2, VMV3: Ventromedial visual areas associated with scene processing.
+
+VVC: Ventral visual complex, involved in object and scene recognition.
+
+FFA (Fusiform Face Area), PPA (Parahippocampal Place Area): Specialized regions for face and place recognition, respectively.
+oxcns.org
++1
+Aalto University's research portal
++1
+
+🧠 Somatosensory and Motor Areas
+1, 2, 3a, 3b: Primary somatosensory cortex areas processing tactile information.
+
+4: Primary motor cortex responsible for voluntary movements.
+
+5m, 5mv, 5L, 5R: Secondary somatosensory areas involved in integrating sensory information.
+
+🧠 Auditory and Language Areas
+A1: Primary auditory cortex processing basic auditory information.
+
+STGa, STSda, STSdp, STSvp: Superior temporal regions involved in processing complex sounds and language.
+
+TE1a, TE1p, TE2a, TE2p, TE1m: Temporal areas associated with higher-order auditory processing and language comprehension.
+
+🧠 Parietal and Attention-Related Areas
+IPS1, IP0, IP1, IP2: Intraparietal sulcus regions involved in attention and visuospatial processing.
+
+LIPd, LIPv, MIP, VIP: Lateral and medial intraparietal areas associated with eye movements and attention.
+
+PGp, PGi, PGs, PF, PFm, PFop, PFt: Inferior parietal lobule regions implicated in various functions including attention and language.
+ResearchGate
+
+🧠 Frontal and Executive Function Areas
+6a, 6d, 6mp, 6v, 6ma, 6r: Premotor and supplementary motor areas involved in planning and executing movements.
+
+8BM, 8Av, 8Ad, 8C: Frontal eye fields and adjacent areas involved in eye movements and attention.
+
+9m, 9p, 9a: Dorsolateral prefrontal cortex regions associated with working memory and executive functions.
+
+10d, 10r, 10v, a10p, p10p: Frontopolar cortex areas involved in complex cognitive processes.
+
+46, 47l, 47m, 47s, a47r, p47r: Inferior frontal gyrus regions implicated in language and cognitive control.
+
+IFJa, IFJp, IFSa, IFSp: Inferior frontal junction areas involved in task switching and cognitive control.
+
+🧠 Cingulate and Medial Areas
+24dd, 24dv, a24, a24pr, p24, p24pr: Anterior cingulate cortex regions involved in emotion and cognitive control.
+
+23c, 23d, v23ab, d23ab: Posterior cingulate cortex areas associated with memory and self-referential thought.
+
+31a, 31pd, 31pv: Precuneus regions involved in visuospatial imagery and self-processing.
+
+SCEF: Supplementary and cingulate eye fields involved in eye movement control.
+
+🧠 Temporal and Memory-Related Areas
+EC (Entorhinal Cortex), PeEc (Perirhinal Cortex), PreS (Presubiculum), ProS (Prosubiculum): Medial temporal lobe structures involved in memory and navigation.
+
+PHA1, PHA2, PHA3: Parahippocampal areas associated with scene recognition and memory.
+
+TF, TGd, TGv: Temporal pole regions involved in semantic memory and social cognition.
+oxcns.org
+
+🧠 Insular and Opercular Areas
+OP1, OP2-3, OP4: Opercular regions involved in somatosensory and taste processing.
+
+Ig (Insular Granular Cortex), MI (Middle Insula), PI (Posterior Insula), AAIC (Anterior Agranular Insular Cortex): Insular regions associated with interoception and emotion.
+
+FOP1, FOP2, FOP3, FOP4, FOP5: Frontal opercular areas involved in language and taste processing.
+universe-review.ca
++3
+ResearchGate
++3
+oxcns.org
++3
+
+🧠 Other Notable Areas
+RSC (Retrosplenial Cortex), POS1, POS2: Regions involved in navigation and memory.
+
+STSva, STSdp, STSvp: Superior temporal sulcus areas implicated in social perception.
+
+DVT (Dorsal Visual Transitional Area), PHT (Parahippocampal Transitional Area), PH (Parahippocampal Area): Regions associated with scene processing and memory.
+
+TPOJ1, TPOJ2, TPOJ3: Temporo-parieto-occipital junction areas involved in multisensory integration.
+oxcns.org

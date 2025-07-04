@@ -1,0 +1,25 @@
+Danh sách các thành viên:
+# 23122003 Nguyễn Văn Linh
+# 23122022 Trần Hoàng Gia Bảo
+# 23122026 Trần Chấn Hiệp
+# 23122040 Nguyễn Thị Mỹ Kim
+
+CÀI ĐẶT MÔI TRƯỜNG numpy, pandas, seaborn, matplotlib
+'''
+conda create -n env python=3.11
+conda activate env
+pip install matplotlib seaborn numpy pandas
+'''
+
+CÁC FILE NHÓM 5 NỘP GỒM:
+ - train.ipynb: Khi chạy tất cả các code block của train.ipynb, label_mapping và các trọng số của các model được lưu ở 'model_params.json'.
+ - model_params.json: Nhóm cung cấp file 'model_params.json' lưu label_mapping và các trọng số của các model mà nhóm đã chạy để thầy sử dụng trên tập test.
+ - test.ipynb: Khi chạy dữ liệu trên tập test, thầy chỉ cần thay đổi đường dẫn tới file test.csv ở code block cuối cùng, và chạy tất cả các code block của file 'test.ipynb', các đường dẫn trong file 'test.ipynb' là đường dẫn tương đối, tại thư mục '23122003_23122022_23122026_23122040'.
+ - report.pdf: Báo cáo của nhóm về LAB 1, linear regression.
+
+Các output (MSE, MAE, R-squared Score) của các mô hình trên "train.ipynb" được đánh giá trên tập train, validation (tỉ lệ 80:20 của file train.csv)
+Các output (MSE, MAE, R-squared Score) của các mô hình trên "test.ipynb" được đánh giá trên toàn bộ tập train, khi đổi đường dẫn file đến file test, đánh giá tập test trên các mô hình.
+
+
+
+
