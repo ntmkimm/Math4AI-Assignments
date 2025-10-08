@@ -2,7 +2,7 @@
 
 Covers formal proofs, linear regression, principal component analysis (PCA), maximum likelihood estimation (MLE), and maximum a posteriori (MAP) estimation.
 
-# Contributions
+## Contributions
 All the labs is contributed by:
 - 23122003 Nguyen Van Linh
 - 23122022 Tran Chan Hiep
